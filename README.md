@@ -21,7 +21,7 @@ Dengan algoritma brute force, kita dapat mencari solusi dari permainan kartu 24.
 ## Requirement instalasi
 1. Pastikan C++ telah terinstall pada device yang digunakan untuk meng-compile.
 2. Pastikan g++ telah terinstall juga pada device agar dapat mengcompile. Apabila
-belum terinstall, tahap penginstallan dapat dilihat pada link [berikut](https://www.scaler.com/topics/c/c-compiler-for-windows/).
+belum terinstall, tahap penginstallan dapat dilihat pada link [berikut](https://www3.cs.stonybrook.edu/~alee/g++/g++.html).
 ## Langkah penggunaan program
 1. Clone repository ini pada local folder pengguna.
 2. Buka terminal pada folder Tucil1_13521097/src.

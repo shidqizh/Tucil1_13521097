@@ -928,10 +928,12 @@ int main(){
         else{
             ansFile << "Tidak ada solusi yang ditemukan.";
         }
+        cout << "File telah berhasil tersimpan pada test/answer.txt" << endl;
     }
     else{
-        cout << "Terima kasih telah menggunakan solver ini." << endl;
+        cout << "Jawaban tidak disimpan dalam bentuk file." << endl;
     }
+    cout << "Terima kasih telah menggunakan solver ini." << endl;
 
     return 0;
    
