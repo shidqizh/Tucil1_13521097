@@ -29,5 +29,5 @@ belum terinstall, tahap penginstallan dapat dilihat pada link [berikut](https://
 4. Jalankan test.exe dengan cara mengetik "./test" pada terminal.
 5. Atau dengan cara lain, buka folder bin dan run file executable yang terdapat pada folder tsb.
 ## Identitas pembuat
-Nama    : Shidqi Indy Izhari
+Nama    : Shidqi Indy Izhari\
 NIM     : 13521097
