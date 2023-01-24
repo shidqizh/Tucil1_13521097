@@ -5,6 +5,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <string>
+#include <random>
 
 using namespace std;
 
@@ -151,25 +152,50 @@ double evalKartu(string card){
     }
 }
 
+int randint(int Min, int Max) {
+    return (rand() % (Max + 1 - Min)) + Min;
+}
+
 int main(){
     string x1,x2,x3,x4;
     double n1,n2,n3,n4;
-    int cek = 0;
+    int cho;
+    cout << "Selamat datang pada solver permainan 24." << endl;
+    cout << "Apakah anda ingin memasukkan kartu sendiri? \n(1/Ya, 2/Masukkan kartu secara random)" << endl;
     do{
-        printf("Masukkan 4 buah kartu yang ingin digunakan\n");
-        cin >> x1;
-        n1 = evalKartu(x1);
-        cin >> x2;
-        n2 = evalKartu(x2);
-        cin >> x3;
-        n3 = evalKartu(x3);
-        cin >> x4;
-        n4 = evalKartu(x4);
-        if(n1 == 9999 || n2 == 9999 || n3 == 9999 || n4 == 9999){
-            printf("Terdapat kesalahan input pada kartu yang dimasukkan.\n");
+        cin >> cho;
+        if(cho != 1 && cho != 2){
+            cout << "Mohon masukkan input yang sesuai." << endl;
         }
+    }while(cho != 1 && cho != 2);
+
+    if(cho == 1){
+        do{
+            printf("Masukkan 4 buah kartu yang ingin digunakan\n");
+            cin >> x1;
+            n1 = evalKartu(x1);
+            cin >> x2;
+            n2 = evalKartu(x2);
+            cin >> x3;
+            n3 = evalKartu(x3);
+            cin >> x4;
+            n4 = evalKartu(x4);
+            if(n1 == 9999 || n2 == 9999 || n3 == 9999 || n4 == 9999){
+                printf("Terdapat kesalahan input pada kartu yang dimasukkan.\n");
+            }
+            printf("Kartu anda adalah: \n");
+            printf("%f %f %f %f\n",n1,n2,n3,n4);
+        }while(n1 == 9999 || n2 == 9999 || n3 == 9999 || n4 == 9999);
+    }
+    else if(cho == 2){
+        n1 = randint(1,13);
+        n2 = randint(1,13);
+        n3 = randint(1,13);
+        n4 = randint(1,13);
+        printf("Kartu anda adalah: \n");
         printf("%f %f %f %f\n",n1,n2,n3,n4);
-    }while(n1 == 9999 || n2 == 9999 || n3 == 9999 || n4 == 9999);
+    }
+
     string sol = "";
     vector<string> sols;
     int counter = 0;
